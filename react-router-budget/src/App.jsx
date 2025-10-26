@@ -6,16 +6,26 @@ import {
 // Routes
 import Dashboard, { dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
+import Main, { mainLoader } from "./layouts/Main";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard/>,
-    loader: dashboardLoader
-  },
-  {
-    path: "*",
-    element: <Error/>
+    element: <Main/>,
+    loader: mainLoader,
+    errorElement: <Error/>,
+    children:[
+      {
+        index: true,
+        element: <Dashboard/>,
+        loader: dashboardLoader,
+        errorElement: <Error/>
+      },
+      {
+        path: "about",
+        element: <h1>sda</h1>
+      }
+    ]
   }
 ]);
 
