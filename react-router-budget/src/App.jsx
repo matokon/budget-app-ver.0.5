@@ -2,12 +2,23 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // Routes
 import Dashboard, { dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Main, { mainLoader } from "./layouts/Main";
 import { logoutAction } from "./actions/logout";
+
+function About() {
+  return (
+    <button onClick={() => toast.error("SPERMA")}>
+      Pokaż toast
+    </button>
+  );
+}
 
 const router = createBrowserRouter([
   {
@@ -29,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "about",
-        element: <h1>sda</h1>
+        element: <About />
       }
     ]
   }
@@ -40,6 +51,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}/>
+      <ToastContainer />
     </div>
   )
 }
