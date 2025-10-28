@@ -11,10 +11,11 @@ import Dashboard, { dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import Main, { mainLoader } from "./layouts/Main";
 import { logoutAction } from "./actions/logout";
+import { Log } from "./pages/Log";
 
 function About() {
   return (
-    <button onClick={() => toast.error("SPERMA")}>
+    <button onClick={() => toast.success("SPERMA")}>
       Pokaż toast
     </button>
   );
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "logout",
         action: logoutAction,
         element: <p>Wylogowano</p>
+      },
+      {
+        path: "log",
+        element: <Log/>
       },
       {
         path: "about",
