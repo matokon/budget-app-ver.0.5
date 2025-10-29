@@ -11,8 +11,7 @@ const Dashboard = () => {
     const { userName } = useLoaderData()
   return (
     <>
-        <h1>{ userName }</h1>
-        <div>Dashboard </div>
+      {userName ? <p>{userName}</p> : 'Zaloguj się'}
     </>
   )
 }

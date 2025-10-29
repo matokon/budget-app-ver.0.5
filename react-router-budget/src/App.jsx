@@ -15,7 +15,7 @@ import { Log } from "./pages/Log";
 
 function About() {
   return (
-    <button onClick={() => toast.success("SPERMA")}>
+    <button onClick={() => toast.error("SPERMA")}>
       Pokaż toast
     </button>
   );
