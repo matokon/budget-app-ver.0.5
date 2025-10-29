@@ -12,6 +12,7 @@ import Error from "./pages/Error";
 import Main, { mainLoader } from "./layouts/Main";
 import { logoutAction } from "./actions/logout";
 import { Log } from "./pages/Log";
+import { createUserAction } from "./actions/createUser";
 
 function About() {
   return (
@@ -35,13 +36,13 @@ const router = createBrowserRouter([
         errorElement: <Error/>
       },
       {
-        path: "logout",
-        action: logoutAction,
-        element: <p>Wylogowano</p>
+      path: "logout",
+      action: logoutAction
       },
       {
         path: "log",
-        element: <Log/>
+        element: <Log/>,
+        action: createUserAction
       },
       {
         path: "about",
