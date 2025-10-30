@@ -27,27 +27,28 @@ const router = createBrowserRouter([
     path: "/",
     element: <Main/>,
     loader: mainLoader,
-    errorElement: <Error/>,
     children:[
       {
         index: true, 
         element: <Dashboard/>,
         loader: dashboardLoader,
-        errorElement: <Error/>
+        errorElement: <Error />
       },
       {
-      path: "logout",
-      action: logoutAction
+        path: "logout",
+        action: logoutAction
       },
       {
         path: "log",
         element: <Log/>,
-        action: createUserAction
+        action: createUserAction,
+        errorElement: <Error />
       },
       {
         path: "about",
         element: <About />
-      }
+      },
+      { path: "*", element: <Error /> }
     ]
   }
 ]);
