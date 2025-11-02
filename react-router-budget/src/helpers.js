@@ -11,3 +11,13 @@ export const fetchData = (key) => {
 export const deleteData = ({key}) => {
   return localStorage.removeItem(key);
 }
+
+export const getBudgets = () =>
+  JSON.parse(localStorage.getItem("budgets") || "[]");
+
+export const saveBudget = (budget) => {
+  const budgets = getBudgets();
+  const next = [...budgets, budget];
+  localStorage.setItem("budgets", JSON.stringify(next));
+  return budget;
+};

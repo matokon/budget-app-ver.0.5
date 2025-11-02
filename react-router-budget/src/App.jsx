@@ -13,6 +13,7 @@ import Main, { mainLoader } from "./layouts/Main";
 import { logoutAction } from "./actions/logout";
 import { Log } from "./pages/Log";
 import { createUserAction } from "./actions/createUser";
+import { budgetAction } from "./actions/budgetAction";
 
 function About() {
   return (
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         index: true, 
         element: <Dashboard/>,
         loader: dashboardLoader,
+        action: budgetAction,
         errorElement: <Error />
       },
       {

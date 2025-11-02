@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 
 export async function logoutAction() {
     deleteData({key: "userName"});
+    deleteData({key: "budgets"});
     toast.success("Usunąłeś użytkownika.")
     return redirect("/log")
 }
