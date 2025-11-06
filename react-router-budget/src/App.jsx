@@ -14,6 +14,7 @@ import { logoutAction } from "./actions/logout";
 import { Log } from "./pages/Log";
 import { createUserAction } from "./actions/createUser";
 import { budgetAction } from "./actions/budgetAction";
+import BudgetsPage from "./pages/BudgetPage";
 
 function About() {
   return (
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: "log",
         element: <Log/>,
         action: createUserAction,
+        errorElement: <Error />
+      },
+      {
+        path: "budgets",          // czyli /budgets
+        element: <BudgetsPage/>,
         errorElement: <Error />
       },
       {
