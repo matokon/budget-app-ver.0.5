@@ -16,13 +16,7 @@ import { createUserAction } from "./actions/createUser";
 import { budgetAction } from "./actions/budgetAction";
 import BudgetsPage from "./pages/BudgetPage";
 
-function About() {
-  return (
-    <button onClick={() => toast.error("SPERMA")}>
-      Pokaż toast
-    </button>
-  );
-}
+
 
 const router = createBrowserRouter([
   {
@@ -48,13 +42,9 @@ const router = createBrowserRouter([
         errorElement: <Error />
       },
       {
-        path: "budgets",          // czyli /budgets
+        path: "budgets",
         element: <BudgetsPage/>,
         errorElement: <Error />
-      },
-      {
-        path: "about",
-        element: <About />
       },
       { path: "*", element: <Error /> }
     ]

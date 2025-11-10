@@ -2,15 +2,16 @@ import React from 'react'
 import { fetchData } from '../helpers'
 import { useLoaderData } from 'react-router-dom';
 import { AddBudgetForm } from '../components/AddBudgetForm';
+import BudgetCard from '../components/BudgetCard';
 
 export function dashboardLoader(){
     const userName = fetchData("userName");
-    const budget = fetchData("budget");
+    const budget = fetchData("budget") || [];
     return { userName, budget }
 }
 
 const Dashboard = () => {
-    const { userName } = useLoaderData()
+    const { userName, budget } = useLoaderData()
   return (
     <>
       {userName ? (
@@ -21,6 +22,7 @@ const Dashboard = () => {
           <div className="grid-lg">
             <div className="flex-lg">
               <AddBudgetForm/>
+              <BudgetCard budgets={budget} />
             </div>
           </div>
         </div>
