@@ -12,3 +12,5 @@ const BudgetCard = ({ budgets = [] }) => {
     </div>
   );
 };
+
+export default BudgetCard;
