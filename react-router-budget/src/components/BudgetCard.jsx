@@ -6,9 +6,11 @@ const BudgetCard = ({ budgets = [] }) => {
   return (
     <div className='budget-wrapper'>
       <h2 className='h3'>Istniejące Budżety</h2>
+      <div className='budget-wrapper'>
       {budgets.map(b => (
         <div key={b.id}>{b.name}</div>
       ))}
+      </div>
     </div>
   );
 };

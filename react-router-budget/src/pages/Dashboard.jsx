@@ -5,8 +5,8 @@ import { AddBudgetForm } from '../components/AddBudgetForm';
 import BudgetCard from '../components/BudgetCard';
 
 export function dashboardLoader(){
-    const userName = fetchData("userName");
-    const budget = fetchData("budget") || [];
+    const userName = fetchData("userName"); // fetchdata
+    const budget = fetchData("budgets") || [];
     return { userName, budget }
 }
 
