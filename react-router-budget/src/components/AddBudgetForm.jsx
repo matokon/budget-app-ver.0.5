@@ -1,6 +1,6 @@
 import React from 'react'
 import {Form} from "react-router-dom"
-import {CurrencyEuroIcon} from '@heroicons/react/24/solid'
+import {PlusCircleIcon} from '@heroicons/react/24/solid'
 
 export const AddBudgetForm = () => {
   return (
@@ -38,7 +38,7 @@ export const AddBudgetForm = () => {
         </div>
         <button type='submit' className='btn btn--dark'>
             <span>Dodaj</span>
-            <CurrencyEuroIcon width={20}/>
+            <PlusCircleIcon width={20}/>
         </button>
         </Form>
     </div>
