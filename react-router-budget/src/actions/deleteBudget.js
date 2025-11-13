@@ -1,6 +1,9 @@
 import { toast } from "react-toastify";
+import { deleteBudgetById } from "./helpers";
+import { redirect } from "react-router-dom";
 
 export async function deleteDataAction(budgetId) {
-    toast.success("Usunąłeś budżet.")
     deleteBudgetById(budgetId);
+    toast.success("Usunąłeś budżet.");
+    return redirect("/");
 }
