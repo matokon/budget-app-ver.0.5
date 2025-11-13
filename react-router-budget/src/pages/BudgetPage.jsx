@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getBudgets } from "../helpers";
+import { getBudgets } from "../actions/helpers";
 
 export default function BudgetsPage() {
   const [budgets, setBudgets] = useState([]);

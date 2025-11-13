@@ -21,3 +21,13 @@ export const saveBudget = (budget) => {
   localStorage.setItem("budgets", JSON.stringify(next));
   return budget;
 };
+
+export function setData(key, value){
+  localStorage.setItem(key, stringify(value));
+}
+
+export function deleteBudgetById(id) {
+  const budgets = getBudgets("budgets");
+  newBudgets = budgets.filter(budget !== budget.id !== id);
+  setData("budgets", newBudgets);
+};

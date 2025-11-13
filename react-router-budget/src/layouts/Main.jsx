@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchData } from '../helpers'
+import { fetchData } from '../actions/helpers'
 import { Outlet, useLoaderData } from 'react-router-dom';
 import wave from "../assets/wave.svg";
 import { Nav } from '../components/Nav';
