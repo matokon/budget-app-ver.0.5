@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { deleteDataAction } from '../actions/deleteBudget';
+import { ProgressBar } from './ProgressBar';
 
 const BudgetCard = ({ budgets = [] }) => {
   // lokalny state, który będzie trzymał to, co wyświetlamy
@@ -39,6 +40,7 @@ const BudgetCard = ({ budgets = [] }) => {
                 <span>Usuń budżet</span>
               </button>
             </div>
+              <ProgressBar value={20}/>
           </div>
         ))}
       </div>
